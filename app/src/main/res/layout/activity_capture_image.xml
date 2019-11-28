@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    tools:context=".captureimage.CaptureImageActivity">
+
+
+    <com.sahni.rahul.facedetector.captureimage.AutoFitTextureView
+        android:id="@+id/texture_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/camera_switch_button"
+        android:layout_width="@dimen/round_button_medium"
+        android:layout_height="@dimen/round_button_medium"
+        android:layout_marginBottom="@dimen/margin_medium"
+        android:layout_marginStart="@dimen/margin_small"
+        android:padding="@dimen/spacing_large"
+        android:scaleType="fitCenter"
+        android:background="@drawable/outer_circle"
+        app:srcCompat="@drawable/ic_switch_camera_white_24dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+    <ImageButton
+        android:id="@+id/photo_view_button"
+        android:layout_width="@dimen/round_button_medium"
+        android:layout_height="@dimen/round_button_medium"
+        android:layout_marginBottom="@dimen/margin_medium"
+        android:layout_marginEnd="@dimen/margin_small"
+        android:padding="@dimen/spacing_large"
+        android:scaleType="fitCenter"
+        android:background="@drawable/outer_circle"
+        app:srcCompat="@drawable/ic_image_black_24dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <TextView
+        android:id="@+id/countdown_text_view"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        tools:text="1"
+        android:textColor="@android:color/white"
+        android:textSize="100sp"
+        android:gravity="center"
+        android:visibility="invisible"
+        android:background="@drawable/text_background"
+        app:layout_constraintBottom_toTopOf="@+id/camera_switch_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/texture_view" />
+
+    <Button
+        android:id="@+id/take_more_photos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Take more photos"
+        android:visibility="invisible"
+        android:theme="@style/BorderlessButton"
+        app:layout_constraintBottom_toBottomOf="@+id/camera_switch_button"
+        app:layout_constraintEnd_toStartOf="@+id/photo_view_button"
+        app:layout_constraintStart_toEndOf="@+id/camera_switch_button"
+        app:layout_constraintTop_toTopOf="@+id/camera_switch_button" />
+
+    <TextView
+        android:id="@+id/searching_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Searching..."
+        android:visibility="invisible"
+        android:textColor="@android:color/white"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:background="@drawable/text_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/texture_view" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
